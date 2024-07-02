@@ -1,0 +1,14 @@
+import './App.css'
+import { Film } from './components/film/Film'
+
+function App() {
+
+
+  return (
+    <>
+      <Film />
+    </>
+  )
+}
+
+export default App

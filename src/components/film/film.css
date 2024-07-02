@@ -1,0 +1,73 @@
+.containerFilm {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxFilm {
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    margin-top: 30px;
+    width: 450px;
+    background: white;
+}
+
+.imgFilm {
+    position: relative;
+    bottom: 25px;
+}
+
+.imgFilmDecor {
+    padding: 5px;
+    position: relative;
+    bottom: 140px;
+    right: 45px;
+    display: inline-block;
+    background: orange;
+    color: white;
+}
+
+.boxFilmContent {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.titleFilm {
+    color: #6F6F6F;
+    margin: 0;
+    padding-top: 25px;
+}
+
+.containerFilmButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn {
+    width: 100px;
+    padding: 5px 2px 5px 2px;
+    background: transparent;
+    border: none;
+    border-radius: 2px;
+    color: #9C9489;
+}
+
+.btnPrice {
+    background: #9C9489;
+    color: white;
+}
+
+.card-body-stars {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
