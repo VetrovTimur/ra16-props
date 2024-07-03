@@ -1,14 +1,20 @@
-import React from 'react'
 import { CardsFilm } from './CardsFilm'
 import './film.css'
+import { TData } from './types'
 
 
-const dataFilm = [
+const dataFilm: TData = [
   {
     name: 'Супермен',
     genre: 'Экшн',
     price: '1₽',
-    rating: 1
+    rating: 7
+  },
+  {
+    name: 'Бетмен',
+    genre: 'Экшн',
+    price: '100500₽',
+    rating: 5
   },
   {
     name: 'Одинокий странник',
@@ -26,7 +32,13 @@ const dataFilm = [
     name: 'Другой мир',
     genre: 'Боевик',
     price: '1200₽',
-    rating: 5
+    rating: -1
+  },
+  {
+    name: 'Одинокий волк',
+    genre: 'Вестерн',
+    price: '399₽',
+    rating: 2
   },
 ]
 

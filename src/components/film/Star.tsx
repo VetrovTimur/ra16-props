@@ -1,6 +1,4 @@
-import React from 'react'
-
-export const Star = (props) => {
+export const Star = (props : number) => {
   return (
     <>
         <li key={props}>
