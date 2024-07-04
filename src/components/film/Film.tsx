@@ -44,8 +44,6 @@ const dataFilm: TData = [
 
 export const Film = () => {
   return (
-    <>
-      <CardsFilm data={dataFilm}/>
-    </>
+    <CardsFilm data={dataFilm}/>
   )
 }

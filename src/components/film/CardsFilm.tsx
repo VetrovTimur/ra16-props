@@ -12,7 +12,7 @@ export const CardsFilm = ({ data }: TDataFilm) => {
     return (
         <div className='containerFilm'>
             {data.map((item) => {
-                const isValid = validateCount(item.rating);
+                const isValid = validateCount(item.rating as number);
 
                 return (
                     isValid  && <div key={item.name} className='boxFilm'> 
@@ -22,7 +22,7 @@ export const CardsFilm = ({ data }: TDataFilm) => {
                         </div>
                         <div className='boxFilmContent'>
                             <h2 className='titleFilm'>{item.name}</h2>
-                            <Stars count={item.rating}/>
+                            <Stars count={item.rating as number}/>
                             <div className='containerFilmButton'>
                                 <button className='btn btnPrice'>{`Купить ${item.price}`}</button>
                                 <button className='btn'>Подробнее →</button>

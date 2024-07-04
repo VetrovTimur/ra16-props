@@ -1,20 +1,30 @@
 import './main.css'
 
-export const Listing = ({items}) => {
+interface Item {
+  listing_id: number;
+  url: string;
+  MainImage: string;
+  title: string;
+  currency_code: string;
+  price: number;
+  quantity: number;
+}
+
+
+export const Listing = ({items}: {items: Item[]}) => {
   
-  function level(item) {
-    // return item = item > 20? 'level-high' : item = 20? 'level-medium' : item <= 10? 'level-low' : 'level-low';
-    return item = item > 20? 'level-high' : item <= 10? 'level-low' :  item <= 20? 'level-medium' : '';
+  function level(item : number | string) {
+    return (item as number) > 20 ? 'level-high' : (item as number) <= 10 ? 'level-low' : (item as number) <= 20 ? 'level-medium' : '';
   }
 
-  function sizeTitle(item) {
+  function sizeTitle(item :string) {
     if (item?.length > 50) {
       return item = item.slice(0, 50) + '...';
     }
     return item
   }
 
-  function currencyCode(currency, price) {
+  function currencyCode(currency : string, price : number) {
     if(currency === 'USD' || currency === 'EUR') { 
       return `${currency} ${price}`
     }
@@ -22,7 +32,6 @@ export const Listing = ({items}) => {
   }
 
   return (
-    <>
     <div className='item-list'>
         {
           items.map((item) => (
@@ -41,6 +50,5 @@ export const Listing = ({items}) => {
           ))
         }
       </div>
-    </>
   )
 }
