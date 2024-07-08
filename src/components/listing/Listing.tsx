@@ -14,7 +14,10 @@ interface Item {
 export const Listing = ({items}: {items: Item[]}) => {
   
   function level(item : number | string) {
-    return (item as number) > 20 ? 'level-high' : (item as number) <= 10 ? 'level-low' : (item as number) <= 20 ? 'level-medium' : '';
+    if (typeof item === 'string') {
+      return 'Error'
+    }
+    return item  > 20 ? 'level-high' : item <= 10 ? 'level-low' : item <= 20 ? 'level-medium' : '';
   }
 
   function sizeTitle(item :string) {

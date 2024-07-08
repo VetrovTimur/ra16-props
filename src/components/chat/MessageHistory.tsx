@@ -12,7 +12,6 @@ interface MessageItem {
 
 
   export const MessageHistory = ({ list }: { list: MessageItem[] }) => {
-    console.log(list)
   return (
     <ul>
         {

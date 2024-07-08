@@ -12,7 +12,10 @@ export const CardsFilm = ({ data }: TDataFilm) => {
     return (
         <div className='containerFilm'>
             {data.map((item) => {
-                const isValid = validateCount(item.rating as number);
+                let isValid;
+                if( typeof item.rating === 'number') {
+                    isValid = validateCount(item.rating);
+                }  
 
                 return (
                     isValid  && <div key={item.name} className='boxFilm'> 
